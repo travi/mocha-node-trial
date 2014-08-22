@@ -1,14 +1,21 @@
-var assert = require("chai").assert;
-var tags = require("../lib/tags.js");
+var assert = require("chai").assert,
+    tags = require("../lib/tags.js"),
+    randomNumber = require("random-js"),
+    randomString = require('randomstring'),
+    sinon = require("sinon"),
+    sinonChai = require("sinon-chai");
 
 describe("Tags", function(){
     describe("#parse()", function(){
-        it("should parse long formed tags", function(){
-            var args = ["--depth=4", "--hello=world"];
-            var results = tags.parse(args);
+        it("should parse long-formed tags", function(){
+            var anyDepth = randomNumber.integer(0, 9)(randomNumber.engines.nativeMath),
+                world = randomString.generate(),
+                results;
 
-            assert.equal(results.depth, 4);
-            assert.equal(results.hello, 'world');
+            results = tags.parse([("--depth=" + anyDepth), ("--hello=" + world)]);
+
+            assert.equal(results.depth, anyDepth);
+            assert.equal(results.hello, world);
         });
      });
 
