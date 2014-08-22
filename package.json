@@ -1,0 +1,18 @@
+{
+  "name": "mocha-first-run",
+  "version": "0.0.0",
+  "description": "figuring out mocha conventions for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mocha",
+    "node"
+  ],
+  "author": "Matt Travi <npm@travi.org> (http://travi.org/)",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.9.1"
+  }
+}
