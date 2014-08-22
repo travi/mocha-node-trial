@@ -27,5 +27,13 @@ describe("Tags", function(){
                 foo: 'bar'
             }, results);
         });
+
+        it("should accept tags without values as boolean", function () {
+            var argument = randomString.generate(),
+
+                results = tags.parse(["--" + argument]);
+
+            assert.isTrue(results[argument]);
+        });
      });
 });
