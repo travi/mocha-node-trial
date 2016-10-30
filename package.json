@@ -13,13 +13,13 @@
   "author": "Matt Travi <npm@travi.org> (http://travi.org/)",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^1.9.1",
+    "chai": "^3.5.0",
     "random-js": "^1.0.4",
     "randomstring": "^1.0.3",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.5.0"
   },
   "dependencies": {
-    "lodash": "^2.4.1"
+    "lodash": "^4.16.4"
   }
 }
